@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+// @import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap");
+@import "./assets/fontawesome-free/css/all.min.css";
+// @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css";
+@import "~angular-notifier/styles.scss";
+@import "./assets/sass/app.scss";
+@import "./assets/css/sb-admin-2.min.css";
+@import "./assets/css/custom.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+.xmlImage img{
+  width: 200px!important;
+}

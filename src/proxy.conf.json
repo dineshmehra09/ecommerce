@@ -1,0 +1,12 @@
+{
+  "/test/*": {
+    "target": "https://digitalapi.auspost.com.au",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "headers": {
+      "Connection": "keep-alive",
+      "Authorization": "Basic MjA5NzY5YmMtY2Y5OS00MjRlLWE0YjctYWYwZGYxNzQwNmEwOngxRUU2NDRGI0U2MTlANTFEODRB"
+    }
+  }
+}

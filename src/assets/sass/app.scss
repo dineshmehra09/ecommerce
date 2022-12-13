@@ -1,0 +1,209 @@
+// @import "scss/variables";
+// // @import "../../../node_modules/bootstrap/scss/bootstrap";
+// @import "scss/core/palette";
+// @import "scss/app-variables";
+@import "scss/mixins";
+// @import "scss/custom-bootstrap";
+// @import "scss/core";
+// // @import "scss/fonts/weather-icons";
+// @import "scss/plugins";
+// @import "scss/demo";  // Remove this SCSS from production
+
+// p {
+//   margin-bottom: 0 !important;
+// }
+
+// p,
+// a,
+// span,
+// li,
+// h6,
+// td,
+// th {
+//   font-size: 14px;
+// }
+
+.btn {
+  margin-bottom: 0 !important;
+  &.btn-warning {
+    color: white !important;
+  }
+  .spinner-border {
+    width: 15px;
+    height: 15px;
+    border-width: 3px;
+    margin-right: 3px;
+  }
+}
+
+.action-buttons {
+  span {
+    cursor: pointer;
+  }
+}
+
+.form-control {
+  color: black !important;
+}
+
+.notifier__notification-button {
+  position: relative;
+  top: -4px;
+}
+
+// .wrapper {
+//   overflow: hidden;
+// }
+
+// .app-sidebar {
+//   z-index: 999;
+// }
+
+// .sidebar-content {
+//   background-color: #00004d;
+//   .navigation {
+//     li {
+//       a {
+//         text-decoration: none;
+//         &:hover {
+//           background: rgba(200, 200, 200, 0.2);
+//         }
+//       }
+//       .dropdown-toggle {
+//         .dropdown-title {
+//           background: none;
+//         }
+//       }
+//       .dropdown-menu {
+//         position: relative !important;
+//         top: 0 !important;
+//         left: 0 !important;
+//         transform: none !important;
+//         width: 100%;
+//         .dropdown-item {
+//           background: none;
+//           padding: 5px 30px 13px;
+//           &:hover {
+//             background: rgba(200, 200, 200, 0.2);
+//           }
+//           &.active {
+//             background: rgba(200, 200, 200, 0.2);
+//           }
+//           .d-item {
+//             vertical-align: sub;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.d-item {
+  font-size: 12px;
+}
+.dropdown-menu > a {
+  width: 100%;
+}
+.dropdown-title {
+  background-color: #00004d;
+}
+.dropdown-menu > a:hover {
+  background: rgba(200, 200, 200, 0.2);
+}
+.dropdown-menu > a:active {
+  background: rgba(200, 200, 200, 0.2);
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: white;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+}
+
+.main-panel {
+  padding-top: 100px;
+}
+
+#forgotPage,
+#login {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url("../../assets/img/login_bg.jpg") no-repeat;
+    background-size: cover;
+    filter: blur(4px);
+  }
+  .container-fluid {
+    height: 100vh;
+    .row {
+      height: 100%;
+    }
+  }
+}
+
+.image-upload-block {
+  .file-uploader {
+    position: relative;
+    input {
+      position: absolute;
+      opacity: 0;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .uploaded-img {
+    max-width: 300px;
+    margin-bottom: 15px;
+  }
+}
+
+.angular-editor-textarea {
+  height: 300px !important;
+  outline: none;
+}
+
+.md-drppicker.double {
+  width: max-content !important;
+}
+
+.filter-dropdown {
+  .btn {
+    box-shadow: none;
+    border-color: #ccc;
+    color: #858796;
+  }
+}
+.header-blue {
+  background-color: #00004d;
+}
+.custom-file {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 50px 0px;
+  .custom-file-upload {
+    // margin: 0px;
+  }
+  input[type="file"] {
+    display: none;
+  }
+}
+.text-area-email {
+  margin-top: 10px;
+  padding: 15px;
+  textarea {
+    width: 100%;
+  }
+}

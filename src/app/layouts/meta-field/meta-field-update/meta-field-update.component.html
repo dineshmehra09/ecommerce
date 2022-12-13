@@ -1,0 +1,133 @@
+<div id="content">
+  <!-- Main Content -->
+  <div id="content">
+    <h1 class="h3 mb-2 top-heading blue-bg">
+      <!-- <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#" routerLink="/countries">Country List</a>
+          </li>
+          <li class="breadcrumb-item active">Update Country</li>
+        </ol>
+      </nav> -->
+      <span>Meta Field</span>
+    </h1>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card shadow mb-4 mt-4 custom-card c-card-blur-bg">
+            <div class="card-header searchbar">
+              <div class="row">
+                <div class="col-md-8">Update Meta Field</div>
+                <div class="col-md-4 text-right line-middle"></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-6">
+                  <form
+                    (submit)="onUpdateFaq(addMetaForm)"
+                    #addMetaForm="ngForm"
+                  >
+                    <div class="form-group">
+                      <label>Field Name <sup>*</sup></label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Field Name"
+                        name="field_name"
+                        [ngModel]='metaData.field_name'
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Currency<sup>*</sup></label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Currency"
+                        name="currency"
+                        [ngModel]='metaData.currency'
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Transaction type<sup>*</sup></label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Transaction Type"
+                        name="transaction_type"
+                        [ngModel]='metaData.transaction_type'
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Country Iso Code<sup>*</sup></label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Country Iso Code"
+                        name="country_iso_code"
+                        [ngModel]='metaData.country_iso_code'
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Service ID<sup>*</sup></label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="Enter Service ID"
+                        name="service_id"
+                        [ngModel]='metaData.service_id'
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Min Length</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="Min length"
+                        name="min_length"
+                        [ngModel]='metaData.min_length'
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Max Length</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="Max length"
+                        name="max_length"
+                        [ngModel]='metaData.max_length'
+                        required
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      [disabled]="!addMetaForm.valid"
+                      class="btn btn-warning submit-btn"
+                    >
+                      <div
+                        [hidden]="!submitting"
+                        class="spinner-border text-light"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      Submit
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

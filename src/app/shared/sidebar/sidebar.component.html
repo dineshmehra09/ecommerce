@@ -1,0 +1,67 @@
+<div class="sidebar sidebar-dark">
+  <div class="nav-wrap l-custom-nav">
+    <ul class="navbar-nav accordion" id="accordionSidebar">
+      <ng-container *ngFor="let module of fetchModule; index as i">
+        <ng-container
+          *ngIf="
+            module.subModule.length != 0 &&
+              (module.module_name == 'Membership');
+            else alter
+          "
+        >
+          <ng-container *ngFor="let subModule of module.subModule">
+            <li
+              class="nav-item"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              <a class="nav-link" [routerLink]="subModule.route">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                <span>{{ subModule.module }}</span></a
+              >
+            </li>
+          </ng-container>
+        </ng-container>
+
+        <ng-template #alter>
+          <li class="nav-item" *ngIf="module.subModule.length != 0">
+            <a
+              class="nav-link collapsed"
+              [href]="'module' + i"
+              data-toggle="collapse"
+              [attr.data-target]="'#module' + i"
+              aria-expanded="true"
+              [attr.aria-controls]="'module' + i"
+            >
+              <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+
+              <span>{{ module.module_name }}</span>
+            </a>
+            <div
+              [id]="'module' + i"
+              [attr.aria-labelledby]="'module' + i"
+              class="collapse"
+              data-parent="#accordionSidebar"
+            >
+              <div class="bg-white py-2 collapse-inner rounded">
+                <a
+                  *ngFor="let subModule of module.subModule"
+                  class="collapse-item"
+                  [routerLink]="subModule.route"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  >{{ subModule.module }}</a
+                >
+              </div>
+            </div>
+          </li>
+        </ng-template>
+      </ng-container>
+    </ul>
+
+    <div class="nav-footer">
+      <!-- <span>Logged in as: </span> -->
+      <!-- <strong>{{ name[0].firstname }} {{ name[0].lastname }}</strong> -->
+    </div>
+  </div>
+</div>

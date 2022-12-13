@@ -1,0 +1,97 @@
+<div id="content">
+  <!-- Main Content -->
+  <div id="content">
+    <h1 class="h3 mb-2 top-heading blue-bg">
+      <!-- <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#" routerLink="/countries">Country List</a>
+          </li>
+          <li class="breadcrumb-item active">Update Country</li>
+        </ol>
+      </nav> -->
+      <span>Meta Field</span>
+    </h1>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card shadow mb-4 mt-4 custom-card c-card-blur-bg">
+            <div class="card-header searchbar">
+              <div class="row">
+                <div class="col-md-8">View Meta Field</div>
+                <div class="col-md-4 text-right line-middle"></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row mb-3">
+                    <div class="col-md-2">
+                      <p>Field Name:</p>
+                    </div>
+                    <div class="col-md-10">
+                      <h6>{{ metaData.field_name }}</h6>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-2">
+                      <p>Currency:</p>
+                    </div>
+                    <div class="col-md-10">
+                      <h6>{{ metaData.currency }}</h6>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-2">
+                      <p>Transaction Type:</p>
+                    </div>
+                    <div class="col-md-10">
+                      <h6>{{ metaData.transaction_type }}</h6>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                      <div class="col-md-2">
+                        <p>Max Length:</p>
+                      </div>
+                      <div class="col-md-10">
+                        <h6>{{ metaData.max_length }}</h6>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-md-2">
+                        <p>Min Length:</p>
+                      </div>
+                      <div class="col-md-10">
+                        <h6>{{ metaData.min_length }}</h6>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-md-2">
+                        <p>Status</p>
+                      </div>
+                      <div class="col-md-10">
+                        <span
+                        class="badge badge-success"
+                        style="cursor: pointer"
+                        [ngClass]="{
+                          'badge-danger': metaData.is_active !== true
+                        }"
+                      >
+                        {{
+                          metaData.is_active == true
+                            ? "Active"
+                            : "Inactive"
+                        }}
+                      </span>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
